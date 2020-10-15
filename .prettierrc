@@ -1,5 +1,4 @@
 {
-  "workbench.colorCustomizations": {},
   "editor.tabSize": 2,
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -8,6 +7,4 @@
   "prettier.enable": true,
   "prettier.requireConfig": true,
   "prettier.disableLanguages": ["markdown"]
-
-
 }
