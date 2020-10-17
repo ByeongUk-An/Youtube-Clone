@@ -5,6 +5,7 @@ import styles from "./videolist.module.css";
 function VideoList({ videos, onVideoClick, display }) {
   return (
     <ul className={styles.videos}>
+      {/* {console.log(videos)} */}
       {videos.map((video) => (
         <VideoItem
           video={video}

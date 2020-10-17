@@ -13,19 +13,17 @@ function App({ youtube }) {
   };
 
   const search = (query) => {
+    setSelectedVideo(null);
     youtube //
       .search(query)
-      .then((videos) => {
-        setVideos(videos);
-        setSelectedVideo(null);
-      });
+      .then((videos) => setVideos(videos));
   };
 
   useEffect(() => {
     youtube
       .mostPopular() //
       .then((videos) => setVideos(videos));
-  }, []);
+  }, [youtube]);
   return (
     <div className={styles.app}>
       <SearchHeader onSearch={search} />
