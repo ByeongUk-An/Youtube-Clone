@@ -12,21 +12,18 @@ function App({ youtube }) {
     setSelectedVideo(video);
   };
 
-  const search = useCallback(
-    (query) => {
-      setSelectedVideo(null);
-      youtube
-        .search(query) //
-        .then((videos) => setVideos(videos));
-    },
-    [youtube]
-  );
+  const search = useCallback((query) => {
+    setSelectedVideo(null);
+    youtube
+      .search(query) //
+      .then((videos) => setVideos(videos));
+  }, []);
 
   useEffect(() => {
     youtube
       .mostPopular() //
       .then((videos) => setVideos(videos));
-  }, [youtube]);
+  }, []);
   return (
     <div className={styles.app}>
       <SearchHeader onSearch={search} />
